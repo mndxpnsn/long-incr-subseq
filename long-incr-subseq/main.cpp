@@ -5,6 +5,7 @@
 //  Created by mndx on 09/04/2022.
 //
 
+#include <chrono>
 #include <iostream>
 #include <vector>
 #include <map>
@@ -146,18 +147,12 @@ int main(int argc, const char * argv[]) {
     // Size input
     int n = (int) nums.size();
     
-    ops = 0;
-    
     // Compute length of longest increasing subsequence
     int max_sum = length_of_lis(nums);
     
-    int max_sum_ref = len_of_lis(nums);
-    
     // Print results
     cout << "max_sum: " << max_sum << endl;
-    cout << "max_sum_ref: " << max_sum_ref << endl;
     cout << "ops : " << ops << endl;
-    cout << "ops_ref : " << ops_ref << endl;
     cout << "O(n^2) : " << n * n << endl;
     
     return 0;
